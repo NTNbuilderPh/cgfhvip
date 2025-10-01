@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Filipino Homes by Clint Gado - Your trusted real estate partner in Tagum City">
+    <meta name="keywords" content="Filipino Homes, Tagum City, Real Estate, Clint Gado, cgfhvip">
+    <title>FHVIP CG - Filipino Homes | Tagum City</title>
+    
+    <!-- Font Awesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Custom CSS -->
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        .profile-card {
+            background: white;
+            border-radius: 20px;
+            padding: 40px;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+            margin-top: 30px;
+            animation: fadeInUp 0.8s ease;
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .header {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        .logo {
+            width: 120px;
+            height: 120px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            border-radius: 50%;
+            margin: 0 auto 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 48px;
+            color: white;
+            font-weight: bold;
+            box-shadow: 0 10px 30px rgba(102, 126, 234, 0.4);
+        }
+
+        h1 {
+            color: #2d3436;
+            font-size: 32px;
+            font-weight: 700;
+            margin-bottom: 10px;
+        }
+
+        .username {
+            color: #6c5ce7;
+            font-size: 18px;
+            font-weight: 600;
+            margin-bottom: 5px;
+        }
+
+        .bio {
+            color: #636e72;
+            font-size: 16px;
+            line-height: 1.6;
+            margin-bottom: 20px;
+        }
+
+        .established {
+            display: inline-block;
+            background: #f0f3f7;
+            padding: 8px 16px;
+            border-radius: 20px;
+            font-size: 14px;
+            color: #636e72;
+            margin-bottom: 30px;
+        }
+
+        .social-links {
+            display: grid;
+            gap: 15px;
+            margin-bottom: 30px;
+        }
+
+        .social-link {
+            display: flex;
+            align-items: center;
+            padding: 16px 20px;
+            background: #f8f9fa;
+            border-radius: 12px;
+            text-decoration: none;
+            color: #2d3436;
+            transition: all 0.3s ease;
+            border: 2px solid transparent;
+        }
+
+        .social-link:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+            border-color: #6c5ce7;
+        }
+
+        .social-link i {
+            font-size: 24px;
+            width: 40px;
+            text-align: center;
+        }
+
+        .social-link .platform-name {
+            flex: 1;
+            font-weight: 600;
+            margin-left: 10px;
+        }
+
+        .social-link .arrow {
+            color: #b2bec3;
+        }
+
+        .tiktok { color: #000000; }
+        .facebook { color: #1877f2; }
+        .instagram { color: #E4405F; }
+        .threads { color: #000000; }
+
+        .services {
+            background: #f8f9fa;
+            border-radius: 12px;
+            padding: 20px;
+            margin-bottom: 30px;
+        }
+
+        .services h3 {
+            color: #2d3436;
+            margin-bottom: 15px;
+            font-size: 20px;
+        }
+
+        .services ul {
+            list-style: none;
+        }
+
+        .services li {
+            padding: 8px 0;
+            color: #636e72;
+        }
+
+        .services li:before {
+            content: "✓ ";
+            color: #00b894;
+            font-weight: bold;
+            margin-right: 8px;
+        }
+
+        .contact {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            border-radius: 12px;
+            padding: 25px;
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        .contact h3 {
+            margin-bottom: 15px;
+            font-size: 22px;
+        }
+
+        .contact p {
+            margin-bottom: 10px;
+            opacity: 0.95;
+        }
+
+        .footer {
+            text-align: center;
+            color: #636e72;
+            font-size: 14px;
+            margin-top: 30px;
+            padding-top: 20px;
+            border-top: 1px solid #e0e0e0;
+        }
+
+        .badge {
+            display: inline-block;
+            background: #00b894;
+            color: white;
+            padding: 4px 12px;
+            border-radius: 20px;
+            font-size: 12px;
+            margin-left: 10px;
+        }
+
+        @media (max-width: 600px) {
+            .container {
+                padding: 10px;
+            }
+            
+            .profile-card {
+                padding: 25px;
+            }
+            
+            h1 {
+                font-size: 26px;
+            }
+        }
+
+        .pulse {
+            animation: pulse 2s infinite;
+        }
+
+        @keyframes pulse {
+            0% {
+                box-shadow: 0 0 0 0 rgba(102, 126, 234, 0.7);
+            }
+            70% {
+                box-shadow: 0 0 0 20px rgba(102, 126, 234, 0);
+            }
+            100% {
+                box-shadow: 0 0 0 0 rgba(102, 126, 234, 0);
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="profile-card">
+            <div class="header">
+                <div class="logo pulse">FH</div>
+                <h1>FHVIP CG</h1>
+                <div class="username">@cgfhvip</div>
+                <div class="bio">
+                    <strong>Clint Gado</strong><br>
+                    Filipino Homes | Tagum City<br>
+                    Your Trusted Real Estate Partner
+                </div>
+                <span class="established">
+                    <i class="fas fa-calendar"></i> Est. September 13, 2025
+                </span>
+            </div>
+
+            <div class="social-links">
+                <a href="https://www.tiktok.com/@cgfhvip" target="_blank" class="social-link">
+                    <i class="fab fa-tiktok tiktok"></i>
+                    <span class="platform-name">TikTok</span>
+                    <span class="badge">Videos</span>
+                    <i class="fas fa-chevron-right arrow"></i>
+                </a>
+
+                <a href="https://www.facebook.com/cgfhvip" target="_blank" class="social-link">
+                    <i class="fab fa-facebook facebook"></i>
+                    <span class="platform-name">Facebook</span>
+                    <span class="badge">Updates</span>
+                    <i class="fas fa-chevron-right arrow"></i>
+                </a>
+
+                <a href="https://www.instagram.com/cgfhvip" target="_blank" class="social-link">
+                    <i class="fab fa-instagram instagram"></i>
+                    <span class="platform-name">Instagram</span>
+                    <span class="badge">Photos</span>
+                    <i class="fas fa-chevron-right arrow"></i>
+                </a>
+
+                <a href="https://www.threads.net/@cgfhvip" target="_blank" class="social-link">
+                    <i class="fab fa-threads threads"></i>
+                    <span class="platform-name">Threads</span>
+                    <span class="badge">Chat</span>
+                    <i class="fas fa-chevron-right arrow"></i>
+                </a>
+            </div>
+
+            <div class="services">
+                <h3><i class="fas fa-home"></i> Our Services</h3>
+                <ul>
+                    <li>Residential Property Sales</li>
+                    <li>Property Listings & Marketing</li>
+                    <li>Real Estate Consultation</li>
+                    <li>Investment Opportunities</li>
+                    <li>Property Management Advisory</li>
+                </ul>
+            </div>
+
+            <div class="contact">
+                <h3><i class="fas fa-envelope"></i> Get In Touch</h3>
+                <p><strong>Ready to find your dream home?</strong></p>
+                <p>📧 cgfhvip@filipinohomes.ph</p>
+                <p>📱 Message us @cgfhvip on any platform</p>
+                <p>📍 Tagum City, Philippines</p>
+            </div>
+
+            <div class="footer">
+                <p><strong>Filipino Homes - Making Dreams Come True</strong></p>
+                <p>© 2025 FHVIP CG. All Rights Reserved.</p>
+                <p style="margin-top: 10px;">
+                    <small>#FilipinoHomes #TagumCity #RealEstatePH</small>
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Add smooth animations on scroll
+        document.addEventListener('DOMContentLoaded', function() {
+            const links = document.querySelectorAll('.social-link');
+            links.forEach((link, index) => {
+                link.style.animationDelay = `${index * 0.1}s`;
+                link.style.animation = 'fadeInUp 0.8s ease forwards';
+            });
+        });
+
+        // Add click tracking (optional)
+        document.querySelectorAll('.social-link').forEach(link => {
+            link.addEventListener('click', function() {
+                const platform = this.querySelector('.platform-name').textContent;
+                console.log(`Clicked on ${platform}`);
+            });
+        });
+    </script>
+</body>
+</html>
