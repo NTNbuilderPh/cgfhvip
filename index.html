@@ -1,0 +1,622 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <meta
+      name="description"
+      content="Clint Gado - Filipino Homes Sales Agent | Your trusted real estate partner in Tagum City"
+    />
+    <meta
+      property="og:title"
+      content="FHVIP CG - Clint Gado | Filipino Homes"
+    />
+    <meta property="og:image" content="image/logo.jpg" />
+    <title>FHVIP CG - Clint Gado | Filipino Homes</title>
+    <link rel="icon" href="image/logo.jpg" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      :root {
+        --neon: #00ff88;
+        --purple: #8b5cf6;
+        --dark: #0a0a0a;
+        --glass: rgba(255, 255, 255, 0.05);
+        --blur: blur(20px);
+      }
+      body {
+        font-family: "Space Grotesk", sans-serif;
+        background: #0a0a0a;
+        color: #fff;
+        min-height: 100vh;
+        overflow-x: hidden;
+      }
+      body::before {
+        content: "";
+        position: fixed;
+        width: 200%;
+        height: 200%;
+        background: linear-gradient(45deg, #00ff88, #8b5cf6, #ff0080);
+        opacity: 0.1;
+        animation: vibe 20s ease infinite;
+      }
+      @keyframes vibe {
+        0%,
+        100% {
+          transform: rotate(0) scale(1);
+        }
+        50% {
+          transform: rotate(180deg) scale(1.5);
+        }
+      }
+      .hero-bg {
+        position: fixed;
+        inset: 0;
+        z-index: -1;
+        opacity: 0.2;
+      }
+      .hero-bg img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+      .container {
+        max-width: 500px;
+        margin: 0 auto;
+        padding: 20px;
+        position: relative;
+        z-index: 2;
+      }
+      .card {
+        background: var(--glass);
+        backdrop-filter: var(--blur);
+        border-radius: 24px;
+        border: 1px solid rgba(255, 255, 255, 0.1);
+        overflow: hidden;
+        margin: 40px 0;
+      }
+      .header {
+        background: linear-gradient(
+          135deg,
+          rgba(0, 255, 136, 0.1),
+          rgba(139, 92, 246, 0.1)
+        );
+        padding: 60px 30px;
+        text-align: center;
+        position: relative;
+      }
+      .pfp {
+        width: 120px;
+        height: 120px;
+        border-radius: 50%;
+        margin: 0 auto 20px;
+        background: linear-gradient(135deg, var(--neon), var(--purple));
+        padding: 3px;
+        animation: glow 3s ease infinite;
+      }
+      @keyframes glow {
+        0%,
+        100% {
+          box-shadow: 0 0 20px var(--neon);
+        }
+        50% {
+          box-shadow: 0 0 40px var(--neon), 0 0 60px var(--purple);
+        }
+      }
+      .pfp img {
+        width: 100%;
+        height: 100%;
+        border-radius: 50%;
+        object-fit: cover;
+        border: 3px solid var(--dark);
+      }
+      .logo-badge {
+        position: absolute;
+        top: 20px;
+        right: 20px;
+        width: 50px;
+        height: 50px;
+        background: #fff;
+        border-radius: 12px;
+        padding: 8px;
+      }
+      .logo-badge img {
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+      }
+      h1 {
+        font-size: 2.5rem;
+        font-weight: 700;
+        margin: 10px 0;
+        background: linear-gradient(90deg, #fff, var(--neon));
+        -webkit-background-clip: text;
+        background-clip: text;
+        -webkit-text-fill-color: transparent;
+      }
+      .handle {
+        font-size: 1.2rem;
+        color: var(--neon);
+        margin-bottom: 20px;
+      }
+      .badge {
+        display: inline-flex;
+        align-items: center;
+        gap: 5px;
+        background: var(--neon);
+        color: var(--dark);
+        padding: 4px 12px;
+        border-radius: 100px;
+        font-size: 0.8rem;
+        font-weight: 600;
+      }
+      .bio {
+        background: rgba(255, 255, 255, 0.03);
+        border-radius: 16px;
+        padding: 20px;
+        margin-top: 30px;
+      }
+      .bio h2 {
+        font-size: 1.2rem;
+        margin-bottom: 10px;
+        color: var(--neon);
+      }
+      .bio p {
+        opacity: 0.9;
+        line-height: 1.6;
+        margin-bottom: 15px;
+      }
+      .bio-meta {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 15px;
+        margin-top: 15px;
+      }
+      .bio-meta span {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        font-size: 0.9rem;
+        opacity: 0.8;
+      }
+      .content {
+        padding: 30px 20px;
+      }
+      .stats {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 15px;
+        margin-bottom: 30px;
+      }
+      .stat {
+        background: linear-gradient(
+          135deg,
+          rgba(0, 255, 136, 0.1),
+          rgba(139, 92, 246, 0.1)
+        );
+        padding: 20px;
+        border-radius: 16px;
+        text-align: center;
+        border: 1px solid rgba(255, 255, 255, 0.1);
+        transition: all 0.3s;
+      }
+      .stat:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 10px 30px rgba(0, 255, 136, 0.3);
+      }
+      .stat-num {
+        font-size: 2rem;
+        font-weight: 700;
+        color: var(--neon);
+      }
+      .stat-label {
+        font-size: 0.9rem;
+        opacity: 0.7;
+      }
+      .section {
+        margin-bottom: 30px;
+      }
+      .section h3 {
+        font-size: 1.1rem;
+        margin-bottom: 15px;
+        display: flex;
+        align-items: center;
+        gap: 10px;
+      }
+      .section h3 i {
+        color: var(--neon);
+      }
+      .contact-grid,
+      .links {
+        display: grid;
+        gap: 12px;
+      }
+      .item {
+        background: rgba(255, 255, 255, 0.03);
+        padding: 15px;
+        border-radius: 12px;
+        display: flex;
+        align-items: center;
+        gap: 15px;
+        text-decoration: none;
+        color: #fff;
+        border: 1px solid transparent;
+        transition: all 0.3s;
+      }
+      .item:hover {
+        border-color: var(--neon);
+        background: rgba(0, 255, 136, 0.05);
+        transform: translateX(5px);
+      }
+      .item-icon {
+        width: 40px;
+        height: 40px;
+        background: linear-gradient(135deg, var(--neon), var(--purple));
+        border-radius: 10px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-shrink: 0;
+      }
+      .item-info {
+        flex: 1;
+      }
+      .item-label {
+        font-size: 0.75rem;
+        opacity: 0.6;
+        text-transform: uppercase;
+      }
+      .item-value {
+        font-size: 0.9rem;
+        font-weight: 600;
+      }
+      .social-name {
+        font-weight: 600;
+      }
+      .social-handle {
+        font-size: 0.85rem;
+        opacity: 0.7;
+      }
+      .threads-icon {
+        font-size: 20px;
+        font-weight: 700;
+      }
+      .services {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 10px;
+      }
+      .service {
+        background: rgba(255, 255, 255, 0.03);
+        padding: 12px;
+        border-radius: 10px;
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        font-size: 0.9rem;
+        border: 1px solid rgba(255, 255, 255, 0.1);
+      }
+      .service i {
+        color: var(--purple);
+      }
+      .cta {
+        background: linear-gradient(135deg, var(--neon), var(--purple));
+        border-radius: 16px;
+        padding: 30px;
+        text-align: center;
+        margin: 30px 0;
+      }
+      .cta h2 {
+        font-size: 1.8rem;
+        margin-bottom: 10px;
+      }
+      .cta p {
+        margin-bottom: 20px;
+        opacity: 0.9;
+      }
+      .cta-btns {
+        display: flex;
+        gap: 12px;
+        justify-content: center;
+      }
+      .btn {
+        padding: 12px 24px;
+        border-radius: 100px;
+        text-decoration: none;
+        font-weight: 600;
+        transition: all 0.3s;
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+      }
+      .btn-primary {
+        background: var(--dark);
+        color: #fff;
+      }
+      .btn-secondary {
+        background: transparent;
+        color: var(--dark);
+        border: 2px solid var(--dark);
+      }
+      .btn:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+      }
+      .footer {
+        text-align: center;
+        padding: 30px 20px;
+        opacity: 0.8;
+      }
+      .footer-links {
+        display: flex;
+        gap: 20px;
+        justify-content: center;
+        margin: 20px 0;
+        flex-wrap: wrap;
+      }
+      .footer-links a {
+        color: var(--neon);
+        text-decoration: none;
+        font-size: 0.9rem;
+      }
+      .tags {
+        display: flex;
+        gap: 8px;
+        justify-content: center;
+        flex-wrap: wrap;
+        margin-top: 15px;
+      }
+      .tag {
+        background: rgba(0, 255, 136, 0.1);
+        padding: 4px 12px;
+        border-radius: 100px;
+        font-size: 0.75rem;
+        color: var(--neon);
+        border: 1px solid var(--neon);
+      }
+      .qr-float {
+        position: fixed;
+        bottom: 20px;
+        right: 20px;
+        width: 60px;
+        height: 60px;
+        background: #fff;
+        border-radius: 12px;
+        padding: 8px;
+        cursor: pointer;
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+        transition: all 0.3s;
+      }
+      .qr-float:hover {
+        transform: scale(1.1);
+      }
+      .qr-float img {
+        width: 100%;
+        height: 100%;
+      }
+      @media (max-width: 768px) {
+        .container {
+          padding: 10px;
+        }
+        h1 {
+          font-size: 2rem;
+        }
+        .stats,
+        .services {
+          grid-template-columns: 1fr;
+        }
+        .cta-btns {
+          flex-direction: column;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="hero-bg">
+      <img src="image/filipinohomeslanding.webp" alt="" />
+    </div>
+    <div class="container">
+      <div class="card">
+        <div class="header">
+          <div class="logo-badge">
+            <img src="image/logo.jpg" alt="FH" />
+          </div>
+          <div class="pfp">
+            <img
+              src="image/profile.jpg"
+              alt="CG"
+              onerror="this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22%3E%3Ctext y=%2250%25%22 x=%2250%25%22 text-anchor=%22middle%22 dy=%22.35em%22 font-size=%2240%22 fill=%22white%22%3ECG%3C/text%3E%3C/svg%3E'"
+            />
+          </div>
+          <h1>FHVIP CG</h1>
+          <div class="handle">@cgfhvip</div>
+          <span class="badge"><i class="fas fa-check"></i> Verified Agent</span>
+          <div class="bio">
+            <h2>Clint Gado</h2>
+            <p><strong>Sales Person/Agent</strong></p>
+            <p>
+              Making your dream home a reality in Tagum City. Expert guidance,
+              personalized service, proven results.
+            </p>
+            <div class="bio-meta">
+              <span><i class="fas fa-map-pin"></i>Tagum City</span>
+              <span><i class="fas fa-building"></i>Filipino Homes</span>
+              <span><i class="fas fa-star"></i>Top Performer</span>
+            </div>
+          </div>
+        </div>
+        <div class="content">
+          <div class="stats">
+            <div class="stat">
+              <div class="stat-num">100+</div>
+              <div class="stat-label">Happy Clients</div>
+            </div>
+            <div class="stat">
+              <div class="stat-num">50+</div>
+              <div class="stat-label">Properties</div>
+            </div>
+            <div class="stat">
+              <div class="stat-num">5★</div>
+              <div class="stat-label">Rating</div>
+            </div>
+            <div class="stat">
+              <div class="stat-num">24/7</div>
+              <div class="stat-label">Support</div>
+            </div>
+          </div>
+          <div class="section">
+            <h3><i class="fas fa-phone"></i>Contact</h3>
+            <div class="contact-grid">
+              <a href="mailto:businesscg.exclusive2@gmail.com" class="item">
+                <div class="item-icon"><i class="fas fa-envelope"></i></div>
+                <div class="item-info">
+                  <div class="item-label">Email</div>
+                  <div class="item-value">businesscg.exclusive2@gmail.com</div>
+                </div>
+              </a>
+              <a
+                href="https://filipinohomes.com/clint-wood-gado"
+                target="_blank"
+                class="item"
+              >
+                <div class="item-icon"><i class="fas fa-globe"></i></div>
+                <div class="item-info">
+                  <div class="item-label">Website</div>
+                  <div class="item-value">filipinohomes.com</div>
+                </div>
+              </a>
+            </div>
+          </div>
+          <div class="section">
+            <h3><i class="fas fa-link"></i>Socials</h3>
+            <div class="links">
+              <a
+                href="https://tiktok.com/@cgfhvip"
+                target="_blank"
+                class="item"
+              >
+                <div class="item-icon"><i class="fab fa-tiktok"></i></div>
+                <div class="item-info">
+                  <div class="social-name">TikTok</div>
+                  <div class="social-handle">@cgfhvip</div>
+                </div>
+              </a>
+              <a
+                href="https://facebook.com/cgfhvip"
+                target="_blank"
+                class="item"
+              >
+                <div class="item-icon"><i class="fab fa-facebook-f"></i></div>
+                <div class="item-info">
+                  <div class="social-name">Facebook</div>
+                  <div class="social-handle">@cgfhvip</div>
+                </div>
+              </a>
+              <a
+                href="https://instagram.com/cgfhvip"
+                target="_blank"
+                class="item"
+              >
+                <div class="item-icon"><i class="fab fa-instagram"></i></div>
+                <div class="item-info">
+                  <div class="social-name">Instagram</div>
+                  <div class="social-handle">@cgfhvip</div>
+                </div>
+              </a>
+              <a
+                href="https://threads.net/@cgfhvip"
+                target="_blank"
+                class="item"
+              >
+                <div class="item-icon"><span class="threads-icon">@</span></div>
+                <div class="item-info">
+                  <div class="social-name">Threads</div>
+                  <div class="social-handle">@cgfhvip</div>
+                </div>
+              </a>
+            </div>
+          </div>
+          <div class="section">
+            <h3><i class="fas fa-sparkles"></i>Services</h3>
+            <div class="services">
+              <div class="service">
+                <i class="fas fa-home"></i>Property Sales
+              </div>
+              <div class="service"><i class="fas fa-list"></i>Listings</div>
+              <div class="service">
+                <i class="fas fa-handshake"></i>Consultation
+              </div>
+              <div class="service">
+                <i class="fas fa-chart-line"></i>Investment
+              </div>
+              <div class="service">
+                <i class="fas fa-building"></i>Management
+              </div>
+              <div class="service">
+                <i class="fas fa-search"></i>Location Analysis
+              </div>
+            </div>
+          </div>
+          <div class="cta">
+            <h2>Ready to level up?</h2>
+            <p>Let's find your perfect property together</p>
+            <div class="cta-btns">
+              <a
+                href="mailto:businesscg.exclusive2@gmail.com"
+                class="btn btn-primary"
+                ><i class="fas fa-envelope"></i>Email Me</a
+              >
+              <a
+                href="https://filipinohomes.com/clint-wood-gado"
+                class="btn btn-secondary"
+                ><i class="fas fa-globe"></i>Website</a
+              >
+            </div>
+          </div>
+          <div class="footer">
+            <div>© 2025 FHVIP CG</div>
+            <div class="footer-links">
+              <a href="mailto:businesscg.exclusive2@gmail.com">Email</a>
+              <a href="https://tiktok.com/@cgfhvip">TikTok</a>
+              <a href="https://facebook.com/cgfhvip">Facebook</a>
+              <a href="https://instagram.com/cgfhvip">Instagram</a>
+            </div>
+            <div class="tags">
+              <span class="tag">#FilipinoHomes</span>
+              <span class="tag">#TagumCity</span>
+              <span class="tag">#RealEstatePH</span>
+              <span class="tag">#cgfhvip</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="qr-float">
+      <img src="image/qr.png" alt="QR" title="Scan Me" />
+    </div>
+    <script>
+      document.querySelectorAll(".item,.btn").forEach((el) => {
+        el.addEventListener("click", () => {
+          el.style.animation = "pulse 0.3s";
+          setTimeout(() => (el.style.animation = ""), 300);
+        });
+      });
+      window.addEventListener("scroll", () => {
+        document.querySelector(".qr-float").style.transform = `rotate(${
+          window.scrollY * 0.1
+        }deg)`;
+      });
+    </script>
+  </body>
+</html>
